@@ -1,12 +1,26 @@
-<html ng-app="arrayApp">
-	<head>
-		<link rel="stylesheet" href="style.css"></link>
-	</head>
-	<body ng-controller="arrayController">
-	
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-		<script src="app.js"></script>
-		<script src="controller.js"></script>
-		<script src="service.js"></script>
-	</body>
+<!DOCTYPE html>
+<html ng-app="app">
+ <head>
+   <meta charset="utf-8">
+      <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+   <title></title>
+ </head>
+<body ng-controller="mainCtrl">
+  <div class="container">
+    <ul class="" ng-repeat="person in people">
+      <li class=""><span class="bold">Name</span>:  {{person.name}} </li>
+      <li class=""><span class="bold">Email</span>:  {{person.email}} </li>
+      <li class=""><span class="bold">Phone</span>:  {{person.phone}} </li>
+      <li class=""><span class="bold">Date Employed</span>:  {{person.dateEmployed}} </li>
+      <hr>
+    </ul>
+
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.js"></script>
+<script src="app.js"></script>
+<script src="controller.js"></script>
+<script src="service.js" charset="utf-8"></script>
+</body>
 </html>

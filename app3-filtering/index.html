@@ -1,9 +1,34 @@
-<html>
-	<body>
-		Something
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-		<script src="app.js"></script>
-		<script src="controller.js"></script>
-		<script src="service.js"></script>
-	</body>
+<!DOCTYPE html>
+<html ng-app="app">
+ <head>
+   <meta charset="utf-8">
+      <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <link rel="stylesheet" href="style.css">
+   <title></title>
+ </head>
+<body ng-controller="mainCtrl">
+  <div class="container">
+    <input type="text" ng-model="myFilter.name" placeholder="Filter By Name">
+    <input type="text" ng-model="myFilter.email" placeholder="Filter By Email">
+    <input type="text" ng-model="myFilter.phone" placeholder="Filter By Phone">
+    <input type="text" ng-model="myFilter.dateEmployed" placeholder="Filter By Date Employed">
+
+  </div>
+  <div class="container">
+    <ul class="" ng-repeat="person in people | filter: myFilter">
+      <li class=""><span class="bold">Name</span>:  {{person.name}} </li>
+      <li class=""><span class="bold">Email</span>:  {{person.email}} </li>
+      <li class=""><span class="bold">Phone</span>:  {{person.phone}} </li>
+      <li class=""><span class="bold">Date Employed</span>:  {{person.dateEmployed}} </li>
+      <hr>
+    </ul>
+
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.js"></script>
+<script src="app.js"></script>
+<script src="controller.js"></script>
+<script src="service.js" charset="utf-8"></script>
+</body>
 </html>
